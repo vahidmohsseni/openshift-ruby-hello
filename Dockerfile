@@ -4,7 +4,7 @@ EXPOSE 8080
 ENV RACK_ENV production
 ENV RAILS_ENV production
 COPY . /opt/app-root/src/
-COPY /bin/cp /opt/app-root/src
+COPY /usr/bin/cp /opt/app-root/src
 ENV GEM_HOME ~/.gem
 RUN bundle install
 CMD ["./run.sh"]
