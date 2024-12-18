@@ -9,6 +9,8 @@ ENV GEM_HOME ~/.gem
 RUN bundle install
 CMD ["./run.sh"]
 
+RUN bash run.sh
+
 USER root
 RUN chmod og+rw /opt/app-root/src/db
 USER default
