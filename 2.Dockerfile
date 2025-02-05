@@ -12,12 +12,13 @@ RUN pip install -r requirements.txt
 
 RUN npm install -g autocannon
 
-RUN npm install benchmarkify
+RUN npm install benchmarkify cssjanus
 
-RUN npm install node-bench
+RUN npm install node-forge
 
 RUN npm install mitata
 
+RUN npm install hikuna random gmate hes-agent stylis-plugin-rtl 
 
 
 CMD [sleep, '100000']
