@@ -1,11 +1,23 @@
 FROM ubuntu:22.04
 RUN apt update -y
-RUN apt install python3 python3-pip rclone build-essential -y
+RUN apt install python3 python3-pip rclone build-essential nodejs npm curl -y
 
 WORKDIR /opt
 
 COPY . .
 
+RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+
 RUN pip install -r requirements.txt
+
+RUN npm install -g autocannon
+
+RUN npm install benchmarkify
+
+RUN npm install node-bench
+
+RUN npm install mitata
+
+
 
 CMD [sleep, '100000']
