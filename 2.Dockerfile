@@ -18,7 +18,6 @@ RUN npm install node-forge
 
 RUN npm install mitata
 
-RUN npm install -D hikuna random gmate hes-agent stylis-plugin-rtl 
 
 
 CMD [sleep, '100000']
