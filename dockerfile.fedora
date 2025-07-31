@@ -1,0 +1,7 @@
+FROM fedora:42
+
+RUN dnf update
+
+RUN dnf install nftables
+
+RUN dnf install iproute
